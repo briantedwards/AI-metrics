@@ -294,6 +294,12 @@ squad_f1.measure(date(2017, 8, 16), 85.619, "DCN+ (ensemble)", url="https://rajp
 squad_em.measure(date(2017, 9, 20), 78.842, "AIR-FusionNet (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
 squad_f1.measure(date(2017, 9, 20), 85.936, "AIR-FusionNet (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
 
+squad_em.measure(date(2018, 1, 3), 82.650, "r-NET+ (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
+squad_f1.measure(date(2018, 1, 3), 88.493, "r-NET+ (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
+
+squad_em.measure(date(2018, 1, 5), 82.440, "SLQA+ (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
+squad_f1.measure(date(2018, 1, 5), 88.607, "SLQA+ (ensemble)", url="https://rajpurkar.github.io/SQuAD-explorer/")
+
 translation = Problem("Translation between human langauges", ["agi", "language"])
 en_fr_bleu = translation.metric("news-test-2014 En-Fr BLEU", url="http://aclweb.org/anthology/P/P02/P02-1040.pdf", scale=bleu_score, target_label="Identical to professional human translations", target=50)
 en_de_bleu = translation.metric("news-test-2014 En-De BLEU", url="http://aclweb.org/anthology/P/P02/P02-1040.pdf", scale=bleu_score, target_label="Identical to professional human translations", target=50)
